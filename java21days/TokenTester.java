@@ -18,5 +18,5 @@ class TokenTester {
           System.out.println("\nToken 1: " + st2.nextToken());
           System.out.println("Token 2: " + st2.nextToken());
           System.out.println("Token 3: " + st2.nextToken());
-      }
+     }
 }
