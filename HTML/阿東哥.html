@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="referrer" content="origin-when-crossorigin" />
+    <meta name="description" content="上传本地代码/文件-&amp;gt;Github 折腾了半天时间。。。 Github前期准备部分 1）登录github，新建一个 repository 2）repository 命名 3）Github是一个托" />
+    <meta property="og:description" content="上传本地代码/文件-&amp;gt;Github 折腾了半天时间。。。 Github前期准备部分 1）登录github，新建一个 repository 2）repository 命名 3）Github是一个托" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Github 上传代码的两种方式 - 阿東哥© - 博客园</title>
+    <link id="favicon" rel="shortcut icon" href="//common.cnblogs.com/favicon.svg" type="image/svg+xml" />
+    
+    <link rel="stylesheet" href="/css/blog-common.min.css?v=MynSBPsTXNkDVLGPQR89Q2oVwJD1SYW2wiVnCO3DuWg" />
+    
+    <link type="text/css" rel="stylesheet" href="/css/hljs/cnblogs.css?v=2spjdq1Snjw5rAm9auWVRax8Gb7nftS4ORu-8fQ7JGM" />
+    
+    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/coffee/bundle-coffee-mobile.min.css?v=n3U4q5QAEaErnOJP8KTU7vRDG-uCbq1FKqkEeF0Yz9o" />
+    
+    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/chwilliam85/rss" />
+    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/chwilliam85/rsd.xml" />
+    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/chwilliam85/wlwmanifest.xml" />
+    <script>
+        var currentBlogId = 446912;
+        var currentBlogApp = 'chwilliam85';
+        var cb_enable_mathjax = false;
+        var isLogined = true;
+        var isBlogOwner = false;
+        var skinName = 'coffee';
+        var visitorUserId = 'd9e32ab5-0237-4432-5e26-08d98b8533cd';
+        var hasCustomScript = true;
+        try {
+            if (hasCustomScript && document.referrer && document.referrer.indexOf('baidu.com') >= 0) {
+                Object.defineProperty(document, 'referrer', { value: '' });
+                Object.defineProperty(Document.prototype, 'referrer', { get: function(){ return ''; } });
+            }
+        } catch(error) { }
+    </script>
+        <script>
+            var currentPostDateAdded = '2018-08-01 12:16';
+        </script>
+    <script src="https://common.cnblogs.com/scripts/jquery-2.2.0.min.js"></script>
+    <script src="/js/blog-common.min.js?v=V-zVMSdi6fYxja7HtOp6qIiJd_zqHctHxlOKSi6Vq4c"></script>
+    
+    
+    
+    <script type="text/javascript">
+        window.codeHighlightEngine = 1
+        window.enableCodeLineNumber = false
+    </script>
+</head>
+<body class="skin-coffee no-navbar">
+    <a name="top"></a>
+    <div id="top_nav" class="navbar forpc navbar-custom">
+        <nav id="nav_main" class="navbar-main">
+            <ul id="nav_left" class="navbar-list navbar-left">
+                <li class="navbar-branding"><a href="https://www.cnblogs.com/" title="开发者的网上家园"><img src="/images/logo.svg?v=R9M0WmLAIPVydmdzE2keuvnjl-bPR7_35oHqtiBzGsM" alt="博客园Logo" /></a></li>
+                <li><a href="/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-sitehome')">首页</a></li>
+                <li><a href="https://news.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-news')">新闻</a></li>
+                <li><a href="https://q.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-q')">博问</a></li>
+                <li><a id="nav_brandzone" href="https://brands.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-brands')">专区</a></li>
+                <li><a href="https://ing.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-ing')">闪存</a></li>
+                <li><a href="https://edu.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-edu')">班级</a></li>
+            </ul>
+            <ul id="nav_right" class="navbar-list navbar-right">
+                <li>
+                    <form id="zzk_search" class="navbar-search" action="https://zzk.cnblogs.com/s" method="get">
+                        <input name="w" id="zzk_search_input" placeholder="代码改变世界" type="text" tabindex="3" />
+                        <button type="submit" id="zzk_search_button">
+                            <img src="/images/aggsite/search.svg" alt="搜索" />
+                        </button>
+                    </form>
+                </li>
+                <li id="navbar_login_status" class="navbar-list">
+                    <a class="navbar-user-info navbar-blog" href="https://i.cnblogs.com/EditPosts.aspx?opt=1" alt="写随笔" title="写随笔">
+                        <img id="new_post_icon" class="navbar-icon" src="/images/aggsite/newpost.svg" alt="写随笔" />
+                    </a>
+                    <a id="navblog-myblog-icon" class="navbar-user-info navbar-blog" href="https://passport.cnblogs.com/GetBlogApplyStatus.aspx" alt="我的博客" title="我的博客">
+                        <img id="myblog_icon" class="navbar-icon" src="/images/aggsite/myblog.svg" alt="我的博客" />
+                    </a>
+                    <a class="navbar-user-info navbar-message navbar-icon-wrapper" href="https://msg.cnblogs.com/" alt="短消息" title="短消息">
+                        <img id="msg_icon" class="navbar-icon" src="/images/aggsite/message.svg?v=J0WS2P2iPgaIVgXxcAhliw4AFZIpaTWxtdoNAv9eiCA" alt="短消息" />
+                        <span id="msg_count" style="display: none"></span>
+                    </a>
+                    <div id="user_info" class="navbar-user-info dropdown">
+                        <a class="dropdown-button" href="https://home.cnblogs.com/">
+                            <img id="user_icon" class="navbar-avatar" src="/images/aggsite/avatar-default.svg" alt="用户头像" />
+                        </a>
+                        <div class="dropdown-menu">
+                            <a id="navblog-myblog-text" href="https://passport.cnblogs.com/GetBlogApplyStatus.aspx">我的博客</a>
+                            <a href="https://home.cnblogs.com/">我的园子</a>
+                            <a href="https://account.cnblogs.com/settings/account">账号设置</a>
+                            <a href="javascript:void(0)" id="navbar_lite_mode_toggle" title="简洁模式会使用简洁款皮肤显示所有博客">
+    简洁模式 <img id="navbar_lite_mode_on" src="/images/lite-mode-check.svg" class="hide" /><span id="navbar_lite_mode_spinner" class="hide">...</span>
+</a>
+                            <a href="javascript:void(0)" onclick="account.logout();">退出登录</a>
+                        </div>
+                    </div>
+                    <a class="navbar-anonymous" href="https://account.cnblogs.com/signup/">注册</a>
+                    <a class="navbar-anonymous" href="javascript:void(0);" onclick="account.login()">登录</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <div id="page_begin_html">
+        <!-- fork github 控件 -->
+<a href="https://github.com/chwilliam85" class="github-corner" aria-label="View source on Github"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#FD6C6C; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+
+<!-- 自定制样式文件以及脚本 -->
+<script src="https://files.cnblogs.com/files/chwilliam85/cnblog.min.js" defer></script>
+<link rel="stylesheet" href="https://files.cnblogs.com/files/chwilliam85/cnblog.min.css" />
+<script src="https://files.cnblogs.com/files/chwilliam85/title.min.js" defer></script>
+<link rel="stylesheet" href="https://files.cnblogs.com/files/chwilliam85/title.min.css" />
+
+<!-- 背景动画 -->
+<canvas id="c_n9" width="1920" height="990" style="position: fixed; top: 0px; left: 0px; z-index: -1; opacity: 0.5;"></canvas>
+<script src="https://files.cnblogs.com/files/jingmoxukong/canvas-nest.min.js" defer></script>
+    </div>
+    
+<!--done-->
+<div id="home">
+<div id="header">
+	<div id="blogTitle">
+	<a href="https://www.cnblogs.com/chwilliam85/"><img id="blogLogo" src="/skins/custom/images/logo.gif" alt="返回主页" /></a>			
+		
+<!--done-->
+<h1><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/chwilliam85/"></a>
+</h1>
+<h2></h2>
+
+
+
+
+		
+	</div><!--end: blogTitle 博客的标题和副标题 -->
+</div><!--end: header 头部 -->
+
+<div id="main">
+	<div id="mainContent">
+	<div class="forFlow">
+		<div id="navigator">
+			
+<ul id="navList">
+	<li><a id="blog_nav_sitehome" class="menu" href="https://www.cnblogs.com/">
+博客园</a>
+</li>
+	<li>
+<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/chwilliam85/">
+首页</a>
+</li>
+	<li>
+
+<a id="blog_nav_newpost" class="menu" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">
+新随笔</a>
+</li>
+	<li>
+<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/%E9%98%BF%E6%9D%B1%E5%93%A5%C2%A9">
+联系</a></li>
+	<li>
+<a id="blog_nav_admin" class="menu" href="https://i.cnblogs.com/">
+管理</a>
+</li>
+	<li>
+<a id="blog_nav_rss" class="menu" href="javascript:void(0)" data-rss="https://www.cnblogs.com/chwilliam85/rss/">
+订阅</a>
+	
+<a id="blog_nav_rss_image" href="https://www.cnblogs.com/chwilliam85/rss/">
+    <img src="/skins/coffee/images/xml.gif" alt="订阅" />
+</a></li>
+</ul>
+
+
+
+			<div class="blogStats">
+				
+				<div id="blog_stats_place_holder"><script>loadBlogStats();</script></div>
+				
+			</div><!--end: blogStats -->
+		</div><!--end: navigator 博客导航栏 -->
+		<div id="post_detail">
+<!--done-->
+<div id="topics">
+	<div class="post">
+		<h1 class = "postTitle">
+			
+<a id="cb_post_title_url" class="postTitle2 vertical-middle" href="https://www.cnblogs.com/chwilliam85/p/9396541.html">
+    <span>Github 上传代码的两种方式</span>
+    
+
+
+
+</a>
+
+		</h1>
+		<div class="clear"></div>
+		<div class="postBody">
+			<div id="cnblogs_post_body" class="blogpost-body blogpost-body-html">
+<p><span style="font-size: 18pt">上传本地代码/文件-&gt;Github</span></p>
+<p>折腾了半天时间。。。</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h1>Github前期准备部分</h1>
+<p>1）登录github，新建一个 repository</p>
+<p><img src="https://images2018.cnblogs.com/blog/1449774/201807/1449774-20180731150500137-1494187488.png" alt=""></p>
+<p>2）repository 命名</p>
+<p><img src="https://images2018.cnblogs.com/blog/1449774/201807/1449774-20180731150652842-1422368920.png" alt=""></p>
+<p>3）Github是一个托管平台，相当于一台服务器，如果想对其进行操作，还必须安装Git客户端，使用相应的git指令对其进行操作</p>
+<h1>Github客户端下载&amp;安装</h1>
+<p>&nbsp;github客户端下载地址：<a href="https://git-scm.com/download/" target="_blank">https://git-scm.com/download</a></p>
+<p><img src="https://images2018.cnblogs.com/blog/1449774/201807/1449774-20180731151428631-155222015.png" alt=""></p>
+<p>如果是windows操作系统，选择如上 ↑</p>
+<h1>Github客户端配置</h1>
+<p>&nbsp;1）进入到需要上传的目录（也可以在桌面，github命令对话框出来后可以使用 linux 命令切换目录）点击右键选择 Git Bash Here</p>
+<p>&nbsp;<img src="https://images2018.cnblogs.com/blog/1449774/201807/1449774-20180731151801737-668031692.png" alt=""></p>
+<p>2）在命令行输入git init 会多出来一个.git文件夹，这就表示本地git创建成功。第一次在本地操作需要先执行git init命令</p>
+<p>&nbsp;<img src="https://images2018.cnblogs.com/blog/1449774/201807/1449774-20180731152156761-675980324.png" alt=""></p>
+<p>3）设置 ssh key，在本地创建ssh key</p>
+<p>命令：ssh<span class="hljs-attribute">-keygen <span class="hljs-attribute">-t rsa <span class="hljs-attribute">-C <span class="hljs-string">"<span style="background-color: rgba(255, 255, 0, 1)">your_email@youremail.com</span>"&nbsp; （这里替换注册 github 的邮箱）命令输入后一直敲回车。生成的密钥文件默认在&nbsp;C:\Users\<span style="background-color: rgba(255, 255, 0, 1)">windows</span>\.ssh （这里是当前登录电脑的用户目录）</span></span></span></span></p>
+<p>&nbsp;<img src="https://images2018.cnblogs.com/blog/1449774/201807/1449774-20180731152934409-378651306.png" alt=""></p>
+<p>如果需要配置密码，在提示框输入密码</p>
+<p><img src="https://images2018.cnblogs.com/blog/1449774/201807/1449774-20180731153129544-494618469.png" alt=""></p>
+<p>&nbsp;4）切回github网站，进入Account Settings，左边选择SSH and GPG keys --&gt; New SSH key</p>
+<p>&nbsp;<img src="https://images2018.cnblogs.com/blog/1449774/201807/1449774-20180731153619765-1155818338.png" alt=""></p>
+<p>&nbsp;Title 随便填吧，Key的内容：打开生成的 ssh 密钥文件，复制内容，粘贴。<span style="background-color: rgba(51, 153, 102, 1)">点击 Add SSH key</span></p>
+<p>&nbsp;<img src="https://images2018.cnblogs.com/blog/1449774/201807/1449774-20180731153906662-469740445.png" alt=""></p>
+<p>5）验证是否成功，在github 命令对话框输入&nbsp; ssh -T git@github.com</p>
+<p>&nbsp;<img src="https://images2018.cnblogs.com/blog/1449774/201807/1449774-20180731154314457-134231050.png" alt=""></p>
+<p>6）接下来我们要做的就是把本地代码传到github上去，之前还需要设置username和email，因为github每次commit都会记录他们</p>
+<p><img src="https://images2018.cnblogs.com/blog/1449774/201807/1449774-20180731154750010-1941655605.png" alt=""></p>
+<h1>Github代码命令方式上传</h1>
+<p>7）关键的一步来了。上传代码的命令（其实github上面都有告诉你怎么上传，<span style="color: rgba(255, 0, 0, 1)">之前的步骤都是准备工作</span>）</p>
+<p><img src="https://images2018.cnblogs.com/blog/1449774/201807/1449774-20180731155118610-573557553.png" alt=""></p>
+<pre class="f5"><span class="user-select-contain"><span class="user-select-contain">在github命令输入框输入以下命令：
+<span class="user-select-contain"><span style="color: rgba(0, 0, 255, 1)">git add .　　上传目录下所有目录及文件</span>
+<span class="user-select-contain">git commit -m "<span style="background-color: rgba(255, 255, 0, 1)">first commit</span>"　　替换自己的注释
+<span class="user-select-contain">git remote add origin <span class="js-git-clone-help-text">https://github.com/<span style="background-color: rgba(255, 255, 0, 1)">chwilliam85</span>/<span style="background-color: rgba(255, 255, 0, 1)">Test.gi</span><span style="background-color: rgba(255, 255, 0, 1)">t<span style="background-color: rgba(255, 255, 255, 1)"> 替换自己的 github 用户名和需要上传的工程目录名</span></span>
+<span class="user-select-contain mb-0">git push -u origin master</span></span></span></span></span></span></span></pre>
+<p><span style="color: rgba(0, 0, 255, 1)">&nbsp; &nbsp; git add fileName　　上传具体某个文件</span></p>
+<h1>Github文件（类似FTP）方式上传</h1>
+<p>完全参照github提供的上传步骤</p>
+<p>1）新创建 repository</p>
+<p><img src="https://images2018.cnblogs.com/blog/1449774/201807/1449774-20180731155118610-573557553.png" alt=""></p>
+<p>2）进入需要上传的代码的目录，点击右键选择 Git Bash Here，打开github命令输入框。参照github提供的上传步骤，执行对应的命令</p>
+<p>&nbsp;<img src="https://images2018.cnblogs.com/blog/1449774/201807/1449774-20180731160715418-129604416.png" alt=""></p>
+<p>3）命令执行完刷新页面，点击 上传文件按钮 Upload files</p>
+<p><img src="https://images2018.cnblogs.com/blog/1449774/201807/1449774-20180731161254620-565738742.png" alt=""></p>
+<p>4）拖拉文件上传（关键的步骤总在最后）</p>
+<p>&nbsp;<img src="https://images2018.cnblogs.com/blog/1449774/201807/1449774-20180731161755232-1797473332.png" alt=""></p>
+<p>&nbsp;</p>
+</div>
+<div class="clear"></div>
+<div id="blog_post_info_block">
+    <div id="blog_post_info"></div>
+    <div class="clear"></div>
+    <div id="post_next_prev"></div>
+</div>
+		</div>
+		<div class="postDesc">posted @ 
+<span id="post-date">2018-08-01 00:16</span>&nbsp;
+<a href="https://www.cnblogs.com/chwilliam85/">阿東哥©</a>&nbsp;
+阅读(<span id="post_view_count">372</span>)&nbsp;
+评论(<span id="post_comment_count">0</span>)&nbsp;
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=9396541" rel="nofollow">编辑</a>&nbsp;
+<a href="javascript:void(0)" onclick="AddToWz(9396541);return false;">收藏</a>&nbsp;
+<a href="javascript:void(0)" onclick="reportManager.report({ currentUserId: 'd9e32ab5-0237-4432-5e26-08d98b8533cd', targetType: 'blogPost', targetId: '9396541', targetLink: 'https://www.cnblogs.com/chwilliam85/p/9396541.html', title: 'Github 上传代码的两种方式' })">举报</a></div>
+	</div>
+	
+	
+</div><!--end: topics 文章、评论容器-->
+
+<script src="https://common.cnblogs.com/highlight/10.3.1/highlight.min.js" async onload="markdown_highlight()"></script>
+<script>
+    var allowComments = true, cb_blogId = 446912, cb_blogApp = 'chwilliam85', cb_blogUserGuid = 'fd069f58-5c69-4c79-0aa7-08d5f0920a78';
+    var cb_entryId = 9396541, cb_entryCreatedDate = '2018-08-01 00:16', cb_postType = 1;
+    updatePostStats(
+        [cb_entryId],
+        function(id, count) { $("#post_view_count").text(count) },
+        function(id, count) { $("#post_comment_count").text(count) })
+    zoomManager.apply("#cnblogs_post_body img:not(.code_img_closed):not(.code_img_opened)");
+</script>
+
+<a name="!comments"></a>
+<div id="blog-comments-placeholder"></div>
+<div id="comment_form" class="commentform">
+    <a name="commentform"></a>
+    <div id="divCommentShow"></div>
+    <div id="comment_nav"><span id="span_refresh_tips"></span><a href="javascript:void(0);" onclick="return RefreshCommentList();" id="lnk_RefreshComments" runat="server" clientidmode="Static">刷新评论</a><a href="#" onclick="return RefreshPage();">刷新页面</a><a href="#top">返回顶部</a></div>
+    <div id="comment_form_container"></div>
+    <div class="ad_text_commentbox" id="ad_text_under_commentbox"></div>
+    <div id="ad_t2"></div>
+    <div id="opt_under_post"></div>
+    <div id="cnblogs_c1" class="under-post-card">
+             <a onclick="ga('send', 'event', 'banner', 'click', 'Pangle-C1')" target="_blank" rel="nofollow" href="https://c.gridsumdissector.com/r/?gid=gad_545_mzyfo0un&ck=46&adk=566&autorefresh=__AUTOREFRESH__">
+                <img style="width: 300px; height: 250px;" src="https://img2020.cnblogs.com/blog/35695/202110/35695-20211008160624813-1694591598.jpg" alt="" onload="impressC1()" />
+             </a>
+    </div>
+    <div id="under_post_card1"></div>
+    <div id="under_post_card2"></div>
+    <div id="HistoryToday" class="under-post-card"></div>
+    <script type="text/javascript">
+       var commentManager = new blogCommentManager();
+       commentManager.renderComments(0);
+       fixPostBody();
+setTimeout(function() { incrementViewCount(cb_entryId); }, 50);       deliverT2();
+       deliverC1C2();
+       loadNewsAndKb();
+LoadPostCategoriesTags(cb_blogId, cb_entryId);       LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+       GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate, cb_postType);
+       loadOptUnderPost();
+       GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);
+    </script>
+</div>
+
+</div>
+
+
+	</div><!--end: forFlow -->
+	</div><!--end: mainContent 主体内容容器-->
+
+	<div id="sideBar">
+		<div id="sideBarMain">
+			<div id="sidebar_news" class="newsItem">
+            <script>loadBlogNews();</script>
+</div>
+<div id="sidebar_c3"></div>
+			<div id="calendar"><div id="blog-calendar" style="display:none"></div><script>loadBlogDefaultCalendar();</script></div>
+			
+			<DIV id="leftcontentcontainer">
+				<div id="blog-sidecolumn"></div>
+                    <script>loadBlogSideColumn();</script>
+			</DIV>
+			
+		</div><!--end: sideBarMain -->
+	</div><!--end: sideBar 侧边栏容器 -->
+	<div class="clear"></div>
+	</div><!--end: main -->
+	<div class="clear"></div>
+	<div id="footer">
+		<!--done-->
+Copyright &copy; 2021 阿東哥©
+<br /><span id="poweredby">Powered by .NET 6 on Kubernetes</span>
+
+
+
+	</div><!--end: footer -->
+</div><!--end: home 自定义的最大容器 -->
+
+
+    <div id="page_end_html">
+        <!-- 标签云相关库 -->
+<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://files.cnblogs.com/files/jingmoxukong/jquery.engine3D.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://files.cnblogs.com/files/jingmoxukong/jquery.particlePhysics.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://files.cnblogs.com/files/jingmoxukong/jquery.starfieldTagCloud.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- 定时器 -->
+<script>
+function customTimer(inpId, fn) {
+  if ($(inpId).length) {
+    fn();
+  }
+  else {
+    var intervalId = setInterval(function () {
+      if ($(inpId).length) {  //如果存在了
+        clearInterval(intervalId);  // 则关闭定时器
+        customTimer(inpId, fn);              //执行自身
+      }
+    }, 100);
+  }
+}
+function generateTagClouds() {
+  $('.catListTag>ul').wrap('<div class=\'wrap\' ></div>').parent().css({ 'width': '240px', 'height': '240px' });
+
+  var options = {
+    'range': [-200, 300],
+    'gravity': -10,
+    'xPos': 0.5,
+    'yPos': 0.5,
+    'gravityVector': [0, 0, 1],
+    'interval': 100,
+    'hoverGravityFactor': 0
+  };
+
+  $('div.wrap').starfieldTagCloud(options);
+}
+$(function () {
+  ...
+  customTimer('.catListTag', generateTagClouds);
+  ...
+});
+</script>
+    </div>
+
+    <input type="hidden" id="antiforgery_token" value="CfDJ8FO3GXnjClZGrNGr2Ic8Z1qmiuAh1_GOs8oS5dw6qaJk_DbmBHRJK38UdFLnJHtTZVftM39xEnMXyeB4FEEUydyDdncbgAaYZYpA64twZwkyOyobzry4XwLsFNaaYNryH3p1PsVKLBfAVQGjjnxaKJ0SIDRVrPe59TSusgMgq-KEU8iV3GUz5Ic2_Xvcd1uEMQ" />
+</body>
+</html>
