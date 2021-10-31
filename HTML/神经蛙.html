@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="referrer" content="origin-when-crossorigin" />
+    <meta name="description" content="Meta Property=og怎么使用？如何调用og:type？怎么在文章中调用og:title？如何使用调取文章og:image？本文将介绍什么是Meta Property=og协议以及该协议的用" />
+    <meta property="og:description" content="Meta Property=og怎么使用？如何调用og:type？怎么在文章中调用og:title？如何使用调取文章og:image？本文将介绍什么是Meta Property=og协议以及该协议的用" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>网站添加头部Meta property=og协议的使用方法详解教程 - 神经蛙 - 博客园</title>
+    <link id="favicon" rel="shortcut icon" href="//common.cnblogs.com/favicon.svg" type="image/svg+xml" />
+    
+    <link rel="stylesheet" href="/css/blog-common.min.css?v=MynSBPsTXNkDVLGPQR89Q2oVwJD1SYW2wiVnCO3DuWg" />
+    
+    <link type="text/css" rel="stylesheet" href="/css/hljs/cnblogs.css?v=2spjdq1Snjw5rAm9auWVRax8Gb7nftS4ORu-8fQ7JGM" />
+    <link type="text/css" rel="stylesheet" href="https://www.cnblogs.com/shenjingwa/custom.css?v=1I14k5oCLURhdKr25IRKWqNgZiA=" />
+    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/moonlightink/bundle-moonlightink-mobile.min.css?v=ZIskGXxnfsNpPFG3Dh0IuLMPLPH7p5IWvdW2cTVdVBA" />
+    
+    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/shenjingwa/rss" />
+    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/shenjingwa/rsd.xml" />
+    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/shenjingwa/wlwmanifest.xml" />
+    <script>
+        var currentBlogId = 515608;
+        var currentBlogApp = 'shenjingwa';
+        var cb_enable_mathjax = true;
+        var isLogined = true;
+        var isBlogOwner = false;
+        var skinName = 'MoonlightInk';
+        var visitorUserId = 'd9e32ab5-0237-4432-5e26-08d98b8533cd';
+        var hasCustomScript = true;
+        try {
+            if (hasCustomScript && document.referrer && document.referrer.indexOf('baidu.com') >= 0) {
+                Object.defineProperty(document, 'referrer', { value: '' });
+                Object.defineProperty(Document.prototype, 'referrer', { get: function(){ return ''; } });
+            }
+        } catch(error) { }
+    </script>
+        <script>
+            var currentPostDateAdded = '2020-11-20 10:03';
+        </script>
+    <script src="https://common.cnblogs.com/scripts/jquery-2.2.0.min.js"></script>
+    <script src="/js/blog-common.min.js?v=V-zVMSdi6fYxja7HtOp6qIiJd_zqHctHxlOKSi6Vq4c"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+        tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']], processClass: 'math', processEscapes: true },
+        TeX: {
+        equationNumbers: { autoNumber: ['AMS'], useLabelIds: true },
+        extensions: ['extpfeil.js', 'mediawiki-texvc.js'],
+        Macros: {bm: "\\boldsymbol"}
+        },
+        'HTML-CSS': { linebreaks: { automatic: true } },
+        SVG: { linebreaks: { automatic: true } }
+        });
+    </script>
+    <script src="https://mathjax.cnblogs.com/2_7_5/MathJax.js?config=TeX-AMS-MML_HTMLorMML&amp;v=20200504"></script>
+    
+    <script type="text/javascript">
+        window.codeHighlightEngine = 1
+        window.enableCodeLineNumber = false
+    </script>
+</head>
+<body class="skin-moonlightink no-navbar">
+    <a name="top"></a>
+    <div id="top_nav" class="navbar forpc navbar-custom">
+        <nav id="nav_main" class="navbar-main">
+            <ul id="nav_left" class="navbar-list navbar-left">
+                <li class="navbar-branding"><a href="https://www.cnblogs.com/" title="开发者的网上家园"><img src="/images/logo.svg?v=R9M0WmLAIPVydmdzE2keuvnjl-bPR7_35oHqtiBzGsM" alt="博客园Logo" /></a></li>
+                <li><a href="/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-sitehome')">首页</a></li>
+                <li><a href="https://news.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-news')">新闻</a></li>
+                <li><a href="https://q.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-q')">博问</a></li>
+                <li><a id="nav_brandzone" href="https://brands.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-brands')">专区</a></li>
+                <li><a href="https://ing.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-ing')">闪存</a></li>
+                <li><a href="https://edu.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-edu')">班级</a></li>
+            </ul>
+            <ul id="nav_right" class="navbar-list navbar-right">
+                <li>
+                    <form id="zzk_search" class="navbar-search" action="https://zzk.cnblogs.com/s" method="get">
+                        <input name="w" id="zzk_search_input" placeholder="代码改变世界" type="text" tabindex="3" />
+                        <button type="submit" id="zzk_search_button">
+                            <img src="/images/aggsite/search.svg" alt="搜索" />
+                        </button>
+                    </form>
+                </li>
+                <li id="navbar_login_status" class="navbar-list">
+                    <a class="navbar-user-info navbar-blog" href="https://i.cnblogs.com/EditPosts.aspx?opt=1" alt="写随笔" title="写随笔">
+                        <img id="new_post_icon" class="navbar-icon" src="/images/aggsite/newpost.svg" alt="写随笔" />
+                    </a>
+                    <a id="navblog-myblog-icon" class="navbar-user-info navbar-blog" href="https://passport.cnblogs.com/GetBlogApplyStatus.aspx" alt="我的博客" title="我的博客">
+                        <img id="myblog_icon" class="navbar-icon" src="/images/aggsite/myblog.svg" alt="我的博客" />
+                    </a>
+                    <a class="navbar-user-info navbar-message navbar-icon-wrapper" href="https://msg.cnblogs.com/" alt="短消息" title="短消息">
+                        <img id="msg_icon" class="navbar-icon" src="/images/aggsite/message.svg?v=J0WS2P2iPgaIVgXxcAhliw4AFZIpaTWxtdoNAv9eiCA" alt="短消息" />
+                        <span id="msg_count" style="display: none"></span>
+                    </a>
+                    <div id="user_info" class="navbar-user-info dropdown">
+                        <a class="dropdown-button" href="https://home.cnblogs.com/">
+                            <img id="user_icon" class="navbar-avatar" src="/images/aggsite/avatar-default.svg" alt="用户头像" />
+                        </a>
+                        <div class="dropdown-menu">
+                            <a id="navblog-myblog-text" href="https://passport.cnblogs.com/GetBlogApplyStatus.aspx">我的博客</a>
+                            <a href="https://home.cnblogs.com/">我的园子</a>
+                            <a href="https://account.cnblogs.com/settings/account">账号设置</a>
+                            <a href="javascript:void(0)" id="navbar_lite_mode_toggle" title="简洁模式会使用简洁款皮肤显示所有博客">
+    简洁模式 <img id="navbar_lite_mode_on" src="/images/lite-mode-check.svg" class="hide" /><span id="navbar_lite_mode_spinner" class="hide">...</span>
+</a>
+                            <a href="javascript:void(0)" onclick="account.logout();">退出登录</a>
+                        </div>
+                    </div>
+                    <a class="navbar-anonymous" href="https://account.cnblogs.com/signup/">注册</a>
+                    <a class="navbar-anonymous" href="javascript:void(0);" onclick="account.login()">登录</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <div id="page_begin_html">
+        <script>loadPageBeginHtml();</script>
+    </div>
+    <!--done-->
+<div id="home">
+<div id="header">
+	<div id="blogTitle">
+        <a id="lnkBlogLogo" href="https://www.cnblogs.com/shenjingwa/"><img id="blogLogo" src="/skins/custom/images/logo.gif" alt="返回主页" /></a>		
+		
+<!--done-->
+<h1><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/shenjingwa/">神经蛙</a>
+</h1>
+<h2>要么忙着生存，要么赶着去死。</h2>
+
+
+
+
+		
+	</div><!--end: blogTitle 博客的标题和副标题 -->
+	<div id="navigator">
+		
+<ul id="navList">
+<li>
+</li>
+<li>
+<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/shenjingwa/">
+首页</a>
+</li>
+<li>
+
+
+</li>
+<li>
+</li>
+<li>
+
+<!--<partial name="./Shared/_XmlLink.cshtml" model="Model" /></li>--></li>
+<li>
+<a id="blog_nav_admin" class="menu" href="https://i.cnblogs.com/">
+管理</a>
+</li>
+</ul>
+
+
+		<div class="blogStats">
+			<div id="blog_stats_place_holder"><script>loadBlogStats();</script></div>
+		</div><!--end: blogStats -->
+	</div><!--end: navigator 博客导航栏 -->
+</div><!--end: header 头部 -->
+<div id="main">
+	<div id="mainContent">
+	<div class="forFlow">
+		<div id="post_detail">
+    <!--done-->
+    <div id="topics">
+        <div class="post">
+            <h1 class = "postTitle">
+                
+<a id="cb_post_title_url" class="postTitle2 vertical-middle" href="https://www.cnblogs.com/shenjingwa/p/14009445.html">
+    <span>网站添加头部Meta property=og协议的使用方法详解教程</span>
+    
+
+
+
+</a>
+
+            </h1>
+            <div class="clear"></div>
+            <div class="postBody">
+                <div id="cnblogs_post_body" class="blogpost-body blogpost-body-html">
+<p><strong>Meta Property=og怎么使用？</strong><br>如何调用og:type？怎么在文章中调用og:title？如何使用调取文章og:image？本文将介绍什么是Meta Property=og协议以及该协议的用法！</p>
+<p><strong>什么是Meta Property=og协议？</strong><br>og是一种新的HTTP头部标记（Open Graph协议）这种协议可以让网页成为一个“富媒体对象”（被其他网站引用等）。目前主流百度，360等等搜索引擎已经支持og富媒体协议！</p>
+<p><strong>Meta Property=og协议的作用？</strong></p>
+<p>1、能够正确被蜘蛛抓取您的内容到百度、360、搜狗等网页搜索；<br>2、帮助您的内容更有效的在百度、360、搜狗结构化展现；<br>3、能够正确的分享您的内容到SNS网站；<br>4、帮助您的内容更有效的在SNS网络中传播；<br>Meta Property=og标签的应用<br>在&lt;head&gt;和&lt;/head&gt;中添加入meta标签,并填上相应的内容<br>如果一个页面上有多个需要标识出的内容怎么办？<br><span style="color: rgba(255, 255, 153, 1); background-color: rgba(255, 0, 0, 1)"><strong>简单点说就是增加文章页的友好度</strong></span></p>
+<p>您可以重复meta标签，将认为og:type 标签是每一段内容的起始处</p>
+<div class="cnblogs_Highlighter">
+<pre class="brush:html;gutter:true;">&lt;meta property="og:type" content="article" /&gt;
+&lt;meta property="og:title" content="做一个懂秋的女人" /&gt;
+&lt;meta property="og:author" content="白露秋霜" /&gt;
+&lt;meta property="og:image" content=http://www.mobile.com/logo.jpg" /&gt;
+&lt;meta property="og:url" content="http://www.mobile.com"&gt;
+&lt;meta property="og:category" content="装修"&gt;
+&lt;meta property="og:site_name" content="神经蛙" /&gt; 
+&lt;meta property="og:tag" content="文章,白露秋霜"&gt;
+&lt;meta property="og:description" content="人淡如菊，做一个懂秋的女人 白露秋霜  秋意渐浓，一条小路弯弯曲曲地伸向远方" /&gt;
+&lt;meta property="og:url" content="http://www.mobile.com/AA.html" /&gt;
+&lt;meta property="og:release_date" content="2020年10月16日 09:29" /&gt;
+</pre>
+</div>
+<p>Meta Property=og主要标签属性<br>og:title 标题<br>og:type 类型（常用值:article book movie）<br>og:image 略缩图地址<br>og:author 作者名称<br>og:url 页面地址<br>og:release_date 发布时间<br>og:description 页面的简单描述<br>og:site_name 页面所在网站名<br>og:videosrc 视频或者Flash地址<br>og:audiosrc 音频地址</p>
+<p>参考资料：http://www.so.com/help/help_3_9.html</p>
+</div>
+<div id="MySignature">
+    <div>作者：Alone°李道长ご</div>
+<div>联系：WeChat(QQ):<font color="Red">1969170027</font></div>
+<p>-------------------------------------------------</p>
+<p>如果觉得这篇文章对你有小小的帮助的话，点点左下角<strong>“👍”</strong>博主在此感谢！</p>
+</div>
+<div class="clear"></div>
+<div id="blog_post_info_block">
+    <div id="blog_post_info"></div>
+    <div class="clear"></div>
+    <div id="post_next_prev"></div>
+</div>
+            </div>
+            <div class="postDesc">posted @ 
+<span id="post-date">2020-11-20 10:03</span>&nbsp;
+<a href="https://www.cnblogs.com/shenjingwa/">神经蛙</a>&nbsp;
+阅读(<span id="post_view_count">1425</span>)&nbsp;
+评论(<span id="post_comment_count">0</span>)&nbsp;
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=14009445" rel="nofollow">编辑</a>&nbsp;
+<a href="javascript:void(0)" onclick="AddToWz(14009445);return false;">收藏</a>&nbsp;
+<a href="javascript:void(0)" onclick="reportManager.report({ currentUserId: 'd9e32ab5-0237-4432-5e26-08d98b8533cd', targetType: 'blogPost', targetId: '14009445', targetLink: 'https://www.cnblogs.com/shenjingwa/p/14009445.html', title: '网站添加头部Meta property=og协议的使用方法详解教程' })">举报</a></div>
+        </div>
+	    
+	    
+    </div><!--end: topics 文章、评论容器-->
+</div>
+
+<script src="https://common.cnblogs.com/highlight/10.3.1/highlight.min.js" async onload="markdown_highlight()"></script>
+<script>
+    var allowComments = false, cb_blogId = 515608, cb_blogApp = 'shenjingwa', cb_blogUserGuid = 'bd0d5f71-e64d-4408-cc2f-08d6d85344fd';
+    var cb_entryId = 14009445, cb_entryCreatedDate = '2020-11-20 10:03', cb_postType = 1;
+    updatePostStats(
+        [cb_entryId],
+        function(id, count) { $("#post_view_count").text(count) },
+        function(id, count) { $("#post_comment_count").text(count) })
+    zoomManager.apply("#cnblogs_post_body img:not(.code_img_closed):not(.code_img_opened)");
+</script>
+
+<a name="!comments"></a>
+<div id="blog-comments-placeholder"></div>
+<div id="comment_form" class="commentform">
+    <a name="commentform"></a>
+    <div id="divCommentShow"></div>
+    <div id="comment_nav"><span id="span_refresh_tips"></span><a href="javascript:void(0);" onclick="return RefreshCommentList();" id="lnk_RefreshComments" runat="server" clientidmode="Static">刷新评论</a><a href="#" onclick="return RefreshPage();">刷新页面</a><a href="#top">返回顶部</a></div>
+    <div id="comment_form_container"></div>
+    <div class="ad_text_commentbox" id="ad_text_under_commentbox"></div>
+    <div id="ad_t2"></div>
+    <div id="opt_under_post"></div>
+    <div id="cnblogs_c1" class="under-post-card">
+             <a onclick="ga('send', 'event', 'banner', 'click', 'Pangle-C1')" target="_blank" rel="nofollow" href="https://c.gridsumdissector.com/r/?gid=gad_545_mzyfo0un&ck=46&adk=566&autorefresh=__AUTOREFRESH__">
+                <img style="width: 300px; height: 250px;" src="https://img2020.cnblogs.com/blog/35695/202110/35695-20211008160624813-1694591598.jpg" alt="" onload="impressC1()" />
+             </a>
+    </div>
+    <div id="under_post_card1"></div>
+    <div id="under_post_card2"></div>
+    <div id="HistoryToday" class="under-post-card"></div>
+    <script type="text/javascript">
+       var commentManager = new blogCommentManager();
+       commentManager.renderComments(0);
+       fixPostBody();
+setTimeout(function() { incrementViewCount(cb_entryId); }, 50);       deliverT2();
+       deliverC1C2();
+       loadNewsAndKb();
+LoadPostCategoriesTags(cb_blogId, cb_entryId);       LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+       GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate, cb_postType);
+       loadOptUnderPost();
+       GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);
+    </script>
+</div>
+
+	</div><!--end: forFlow -->
+	</div><!--end: mainContent 主体内容容器-->
+	<div id="sideBar">
+		<div id="sideBarMain">
+			<div id="sidebar_news" class="newsItem">
+            <script>loadBlogNews();</script>
+</div>
+<div id="sidebar_c3"></div>
+			<div id="blog-calendar" style="display:none"></div><script>loadBlogDefaultCalendar();</script>			
+			<div id="leftcontentcontainer">
+				<div id="blog-sidecolumn"></div>
+                    <script>loadBlogSideColumn();</script>
+			</div>			
+		</div><!--end: sideBarMain -->
+	</div><!--end: sideBar 侧边栏容器 -->
+	<div class="clear"></div>
+	</div><!--end: main -->
+	<div class="clear"></div>
+	<div id="footer">
+		<!--done-->
+Copyright &copy; 2021 神经蛙
+<br /><span id="poweredby">Powered by .NET 6 on Kubernetes</span>
+
+
+
+	</div><!--end: footer -->
+</div><!--end: home 自定义的最大容器 -->
+
+
+    <div id="page_end_html">
+        <script src="https://files.cnblogs.com/files/hafiz/jquery-migrate-1.2.1.js"></script>
+<div id="scrollTop" style="display:none;">
+      <div class="level-2"></div>
+      <div class="level-3"></div>
+</div>
+<script src="https://files.cnblogs.com/files/hafiz/scroll2top.js"></script>
+<script type="text/javascript">
+    UI.global_search();
+    var uvOptions = {};
+    // !important
+    (function() {
+        initScrollTop();
+    })();
+</script>
+<script type="text/javascript">
+<!--离开页面改变title-->
+var time;
+var normar_title=document.title;
+document.addEventListener('visibilitychange', function () {
+    if (document.visibilityState == 'hidden') {
+         clearTimeout(time);        
+         document.title = '你不喜欢我了吗?';
+    } else {
+        document.title = '回来了记得分享哦!';
+        time=setTimeout(function(){ document.title = normar_title; }, 3000);
+}
+});
+ $(document).ready(function(){
+    if(window.location.href==='https://www.cnblogs.com/shenjingwa/')	{
+         document.title = '神经蛙';
+}
+      $("#navList").append('<li><a rel="nofollow"  id="blog_nav_myyoulian" class="menu" href="https://www.baidu.com/" target="_blank">百度一下</a></li>')  
+});
+</script>
+    </div>
+
+    <input type="hidden" id="antiforgery_token" value="CfDJ8FO3GXnjClZGrNGr2Ic8Z1oYgzbljiMqYOjXaSPt0QnXRqN5yEsJSFtCJWZvwyo9UgtQStB8jZGdgMr7x-RJVt_UCbtb6s4GZGCGg7Vex7ENJ_4SdGfFD1Oc0dIxK7I0jfwOTzKhxkYavKSmmyrXRLhybtq4XMl-kPtVeKHSCl6LFi1-n-JT2XB0ETspLIEtbg" />
+</body>
+</html>
