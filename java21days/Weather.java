@@ -23,5 +23,5 @@ public class Weather {
           // Add 32 to the answer
           cel = cel + 32;
           System.out.println(cel + " degrees Fahrenheit");
-      }
+     }
 }
